@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
+ <editorsettings>
+  <export target="../../src/data/PlayerHouse_1F.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" source="../Map_16bit.tsx"/>
+ <tileset firstgid="1" source="Base_TileSet.tsx"/>
+ <tileset firstgid="462" source="PlayerHouse_Tileset.tsx"/>
+ <tileset firstgid="590" source="CollisionTiles.tsx"/>
+ <tileset firstgid="606" source="Item_Tiles.tsx"/>
+ <layer id="1" name="Base" width="10" height="9">
+  <data encoding="csv">
+0,462,463,464,465,466,467,468,469,0,
+0,478,479,480,481,482,483,484,485,0,
+0,494,495,496,497,498,499,500,501,0,
+0,510,511,512,513,514,515,516,517,0,
+0,526,527,528,529,530,531,532,533,0,
+0,542,543,544,545,546,547,548,549,0,
+0,558,559,560,561,562,563,564,565,0,
+0,574,575,576,577,578,579,580,581,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="2" name="Collision" width="10" height="9">
+  <data encoding="csv">
+594,594,594,594,594,594,594,594,594,594,
+594,594,594,0,611,0,0,0,592,594,
+594,0,0,0,0,0,0,0,0,594,
+594,0,0,0,0,0,0,0,0,594,
+594,0,0,0,594,594,612,0,0,594,
+594,0,0,0,594,594,0,0,0,594,
+594,0,0,0,0,0,0,0,0,594,
+594,0,0,0,0,0,0,0,0,594,
+594,594,594,590,590,594,594,594,594,594
+</data>
+ </layer>
+</map>

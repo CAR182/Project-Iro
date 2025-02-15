@@ -1,0 +1,180 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Pallett_Town_16bit.tmx",
+    "expandedProjectPaths": [
+    ],
+    "exportAsImage.drawTileGrid": true,
+    "exportAsImage.useCurrentScale": true,
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "16Bit/Bedroom_16bit.tmx": {
+            "scale": 4.8687499999999995,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 64.0821566110398,
+                "y": 72.19512195121952
+            }
+        },
+        "16Bit/Pallett_Town_16bit.tmx": {
+            "scale": 2.4343749999999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 160.2053915275995,
+                "y": 144.39024390243904
+            }
+        },
+        "16Bit/PlayerHouse_1F_16bit.tmx": {
+            "scale": 4.8687499999999995,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 80.10269576379974,
+                "y": 72.19512195121952
+            }
+        },
+        "16Bit/PlayerHouse_2F_16bit.tmx": {
+            "scale": 4.8687499999999995,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 72.09242618741978,
+                "y": 72.19512195121952
+            }
+        },
+        "Bedroom_16bit.tmx": {
+            "scale": 4,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 58.625,
+                "y": 72
+            }
+        },
+        "Bedroom_1_16bit.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "CollisionTiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Map_16bit.tsx": {
+            "scaleInEditor": 1
+        },
+        "Misc.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 5.5,
+            "scaleInEditor": 1
+        },
+        "Pallett_Town.tmx": {
+            "expandedGroupLayers": [
+                11
+            ],
+            "scale": 2,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 164,
+                "y": 133.25
+            }
+        },
+        "Pallett_Town_16bit.tmx": {
+            "scale": 4,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 129.5,
+                "y": 77.375
+            }
+        },
+        "Pallett_Town_1x1.tmx": {
+            "expandedGroupLayers": [
+                11
+            ],
+            "scale": 5.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 127.27272727272728,
+                "y": 129
+            }
+        },
+        "Pallett_Town_Base.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1.5
+        },
+        "Pallett_Town_Base_16.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1.5
+        },
+        "PlayerHouse_1F_16bit.tmx": {
+            "scale": 4,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 90.25,
+                "y": 63.625
+            }
+        },
+        "PlayerHouse_2F_16bit.tmx": {
+            "scale": 4,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 100.75,
+                "y": 75.375
+            }
+        },
+        "Test.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Z:/Projects/Project Iro/Original/CollisionTileMap.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Z:/Projects/Project Iro/Original/PokemonTestMap.tmx": {
+            "scale": 8,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 460.375,
+                "y": 252.8125
+            }
+        },
+        "Z:/Projects/Project Iro/Original/PokemonTestTileMap.tsx": {
+            "scaleInDock": 1
+        }
+    },
+    "last.exportedFilePath": "Z:/Projects/Project Iro/Iro/src/data",
+    "last.imagePath": "Z:/Projects/Project Iro/Iro/reference",
+    "map.height": 40,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 70,
+    "openFiles": [
+        "Pallett_Town_16bit.tmx",
+        "Bedroom_16bit.tmx",
+        "Bedroom_1_16bit.tsx"
+    ],
+    "project": "PalletTown.tiled-project",
+    "recentFiles": [
+        "Pallett_Town_16bit.tmx",
+        "Map_16bit.tsx",
+        "Pallett_Town.tmx",
+        "Pallett_Town_1x1.tmx",
+        "Bedroom_1_16bit.tsx",
+        "Bedroom_16bit.tmx",
+        "Z:/Projects/Project Iro/Original/PokemonTestMap.tmx",
+        "Pallett_Town_Base_16.tsx",
+        "CollisionTiles.tsx",
+        "Misc.tsx",
+        "Pallett_Town_Base.tsx",
+        "Z:/Projects/Project Iro/Original/CollisionTileMap.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    },
+    "tileset.transparentColor": "#f8e8f8",
+    "tileset.useTransparentColor": true
+}

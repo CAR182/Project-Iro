@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState, useCallback, useContext } from 'react';
-import { AppContext, InputContext, GameContext, CollisionContext, InteractContext, defaults } from './Context';
+import React, { useRef, useEffect, useState, useCallback } from 'react';
+import { GameContext, CollisionContext, InteractContext, defaults } from './Context';
 import { fade } from 'Utils';
 
 import PalletTown from 'Locations/PalletTown';
@@ -13,12 +13,7 @@ import Overlay from 'Overlay';
 function Game({ children }) {
   const canvasRef = useRef(null);
   const gameLoopRef = useRef();
-  const appCtx = useContext(AppContext);
 
-  const updateInput = (key, held) => {
-    setInputEvent((prev) => ({ ...prev, evt: key, held }));
-    appCtx.update('nav', key);
-  };
   const updateInteraction = (active, text, id, img) =>
     setInteractionEvent((prev) => ({ ...prev, active, text, id, img }));
   const updateCollision = (value, id) => updateEvent((prev) => ({ ...prev, collided: value, id }));
@@ -29,7 +24,6 @@ function Game({ children }) {
 
   const [gameCtx, setGameCtx] = useState({ ...defaults, setLocation: updateLocation });
   const [collisionCtx, updateEvent] = useState({ collided: false, update: updateCollision });
-  const [inputCtx, setInputEvent] = useState({ evt: null, setEvent: updateInput });
   const [interactionCtx, setInteractionEvent] = useState({
     active: false,
     text: '',
@@ -69,22 +63,20 @@ function Game({ children }) {
 
   return (
     <GameContext.Provider value={gameCtx}>
-      <InputContext.Provider value={inputCtx}>
-        <CollisionContext.Provider value={collisionCtx}>
-          <InteractContext.Provider value={interactionCtx}>
-            {children}
-            {render()}
-            {interactionCtx.active && <Overlay />}
-            <canvas
-              ref={canvasRef}
-              name={'Transition'}
-              style={{ position: 'absolute', backgroundColor: '#0000' }}
-              width={gameCtx.canvas.width}
-              height={gameCtx.canvas.height}
-            />
-          </InteractContext.Provider>
-        </CollisionContext.Provider>
-      </InputContext.Provider>
+      <CollisionContext.Provider value={collisionCtx}>
+        <InteractContext.Provider value={interactionCtx}>
+          {children}
+          {render()}
+          {interactionCtx.active && <Overlay />}
+          <canvas
+            ref={canvasRef}
+            name={'Transition'}
+            style={{ position: 'absolute', backgroundColor: '#0000' }}
+            width={gameCtx.canvas.width}
+            height={gameCtx.canvas.height}
+          />
+        </InteractContext.Provider>
+      </CollisionContext.Provider>
     </GameContext.Provider>
   );
 }

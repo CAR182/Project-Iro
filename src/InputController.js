@@ -5,13 +5,12 @@ function InputController() {
   const input = useContext(InputContext);
 
   const onKeyDown = (event) => {
-    // console.log('OnKeyDown: ', event.repeat);
+    console.log('OnKeyDown: ', event.code);
     event.preventDefault();
     if (event.repeat) input.setEvent(event.code, true);
     else input.setEvent(event.code, false);
   };
   const onKeyUp = (event) => {
-    //console.log('onKeyUp');
     event.preventDefault();
     input.setEvent(null, false);
   };

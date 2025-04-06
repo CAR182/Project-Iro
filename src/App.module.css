@@ -80,17 +80,21 @@
   #up {
     grid-column: 2 / 2; /* Centers the 'Up' key in the middle column */
     grid-row: 1 / 1; /* Places the 'Up' key in the top row */
+    cursor: pointer;
   }
   #down {
     grid-column: 2 / 2; /* Centers the 'Down' key in the middle column */
     grid-row: 2/ 2; /* Places the 'Down' key in the bottom row */
+    cursor: pointer;
   }
   #left {
     grid-column: 1 / 1; /* Places the 'Left' key in the left column */
     grid-row: 2 / 2; /* Places the 'Left' key in the middle row */
+    cursor: pointer;
   }
   #right {
     grid-column: 3 / 3; /* Places the 'Right' key in the right column */
     grid-row: 2 / 2; /* Places the 'Right' key in the middle row */
+    cursor: pointer;
   }
   

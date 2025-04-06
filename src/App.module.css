@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     background: radial-gradient(circle, rgba(41,45,61,1) 0%, rgba(3,4,13,1) 100%);
+    overflow: hidden;
   }
 
   .container{
@@ -20,11 +21,24 @@
     border-color: grey;
   }
 
+  .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+    font-size: small;
+    margin-bottom: 10px;
+  }
+  .text >span{
+      margin-top: 10px;
+  }
+
 
   .btnContainer{
     width: 1024px;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: auto;
     padding: 10px;
   }
 
@@ -43,9 +57,10 @@
     visibility: hidden;
   }
 
-  /*AudioToggle*/
 
-  .audioBtn{
+
+  /*AudioToggle*/
+  .audioBtn, .debugBtn{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,12 +68,17 @@
     margin-left: auto;
 
   }
-  .audioBtn >img {
+  .audioBtn > img, .debugBtn >img {
     width: 50px;
     margin-bottom: 5px;
   }
-  .audioBtn >span {
+  .audioBtn >span, .debugBtn >span {
     color: whitesmoke;
+  }
+
+  /*DebugBtn*/
+  .debugBtn{
+    grid-column: 1 / 1;
   }
 
   /* Keyboard */
@@ -97,4 +117,38 @@
     grid-row: 2 / 2; /* Places the 'Right' key in the middle row */
     cursor: pointer;
   }
+
+
+  @media only screen and (max-width: 600px) {
+    .btnContainer {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+      padding: 10px;
+    }
+    .audioBtn {
+      margin:2px
+    }
+    .audioBtn >img {
+      width: 35px;
+    }
+    .audioBtn >span {
+     font-size: 7px
+    }
+
+    .debugBtn {
+      margin:2px
+    }
+    .debugBtn >img {
+      width: 35px;
+    }
+    .debugBtn >span {
+     font-size: 7px
+    }
+    .text {
+      font-size: xx-small;
+    }
+
+  }
+
   

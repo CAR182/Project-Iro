@@ -4,6 +4,7 @@ import { InputContext, AppContext, DebugContext, debugDefaults } from './Context
 import InputController from './InputController';
 import Game from './Game';
 import AudioToggle from 'AudioToggle';
+import DebugToggle from 'DebugToggle';
 import KeyboardNav from 'KeyboardNav';
 import styles from './App.module.css';
 
@@ -55,8 +56,16 @@ function App() {
             </DebugContext.Provider>
           </div>
           <div className={styles.btnContainer}>
+            <DebugToggle
+              value={debugCtx.tiles}
+              clickHandler={(value) => setDebugCtx((prev) => ({ ...prev, tiles: value }))}
+            />
             <KeyboardNav value={inputCtx.evt} />
             <AudioToggle value={appCtx.audio} clickHandler={(value) => updateAppCtx('audio', value)} />
+          </div>
+          <div className={styles.text}>
+            <span>Version:{process.env.REACT_APP_VERSION}</span>
+            <span>Created By: crayner</span>
           </div>
         </div>
       </InputContext.Provider>

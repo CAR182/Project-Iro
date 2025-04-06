@@ -5,7 +5,6 @@ function InputController() {
   const input = useContext(InputContext);
 
   const onKeyDown = (event) => {
-    console.log('OnKeyDown: ', event.code);
     event.preventDefault();
     if (event.repeat) input.setEvent(event.code, true);
     else input.setEvent(event.code, false);
@@ -19,9 +18,16 @@ function InputController() {
     console.log('Mount InputController');
     document.addEventListener('keydown', onKeyDown);
     document.addEventListener('keyup', onKeyUp);
+    document.addEventListener('mouseUp', onKeyUp);
+    document.addEventListener('touchend', onKeyUp);
+    document.addEventListener('contextmenu', (event) => event.preventDefault());
+
     return () => {
       document.removeEventListener('keydown', onKeyDown);
       document.removeEventListener('keyup', onKeyUp);
+      document.removeEventListener('mouseUp', onKeyUp);
+      document.removeEventListener('touchend', onKeyUp);
+      document.removeEventListener('contextmenu', (event) => event.preventDefault());
     };
   }, []);
 

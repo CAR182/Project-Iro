@@ -2,13 +2,13 @@ import { LOCATIONS, TILETYPES } from 'Utils';
 
 const alphaTile = {
   type: TILETYPES.ITEM,
-  src: '/images/Alpha_Tile.png',
+  src: 'images/Alpha_Tile.png',
 };
 
 export default {
   images: {
-    background: '/images/RivalHouse/RivalHouse_BG.png',
-    foreground: '/images/RivalHouse/RivalHouse_FG.png',
+    background: 'images/RivalHouse/RivalHouse_BG.png',
+    foreground: 'images/RivalHouse/RivalHouse_FG.png',
   },
   tileMap: {
     src: 'RivalHouse_TileMap.json',

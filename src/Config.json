@@ -1,10 +1,10 @@
 {
   "player": {
     "src": {
-      "up": "/images/playerUp_2.png",
-      "down": "/images/playerDown_2.png",
-      "left": "/images/playerLeft_2.png",
-      "right": "/images/playerRight_2.png"
+      "up": "images/playerUp_2.png",
+      "down": "images/playerDown_2.png",
+      "left": "images/playerLeft_2.png",
+      "right": "images/playerRight_2.png"
     },
     "frames": 4
   }

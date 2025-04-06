@@ -2,12 +2,12 @@ import { LOCATIONS, TILETYPES } from 'Utils';
 
 const alphaTile = {
   type: 'ITEM',
-  src: '/images/Alpha_Tile.png',
+  src: 'images/Alpha_Tile.png',
 };
 
 export default {
   images: {
-    background: '/images/PlayerHouse/PlayerHouse_1F.png',
+    background: 'images/PlayerHouse/PlayerHouse_1F.png',
   },
   tileMap: {
     src: 'PlayerHouse_1F.json',
@@ -21,7 +21,7 @@ export default {
       },
       612: {
         type: TILETYPES.NPC,
-        src: '/images/Alpha_Tile.png',
+        src: 'images/Alpha_Tile.png',
         onCollision: {
           text: 'MOM: Right. All boys leave home someday. It said so on TV. PROF.OAK next door is looking for you.',
         },

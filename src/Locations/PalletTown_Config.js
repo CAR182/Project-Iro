@@ -2,13 +2,13 @@ import { LOCATIONS, TILETYPES } from 'Utils';
 
 const alphaTile = {
   type: TILETYPES.ITEM,
-  src: '/images/Alpha_Tile.png',
+  src: 'images/Alpha_Tile.png',
 };
 
 export default {
   images: {
-    background: '/images/PalletTown/PalletTown_BG.png',
-    foreground: '/images/PalletTown/PalletTown_FG.png',
+    background: 'images/PalletTown/PalletTown_BG.png',
+    foreground: 'images/PalletTown/PalletTown_FG.png',
   },
   tileMap: {
     src: 'PalletTown_TileMap.json',
@@ -20,10 +20,10 @@ export default {
       17: {
         type: TILETYPES.NPC,
         src: {
-          up: '/images/NPC/NPC_1_Up.png',
-          down: '/images/NPC/NPC_1_Down.png',
-          left: '/images/NPC/NPC_1_Left.png',
-          right: '/images/NPC/NPC_1_Right.png',
+          up: 'images/NPC/NPC_1_Up.png',
+          down: 'images/NPC/NPC_1_Down.png',
+          left: 'images/NPC/NPC_1_Left.png',
+          right: 'images/NPC/NPC_1_Right.png',
         },
         frames: 3,
         onCollision: { text: "I'm raising Pokemon too! When they get strong they can protect me!" },
@@ -32,7 +32,7 @@ export default {
       },
       18: {
         type: TILETYPES.NPC,
-        src: '/images/Alpha_Tile.png',
+        src: 'images/Alpha_Tile.png',
         onCollision: {
           text: 'Technology is incredible. You can now store and recall items and Pokemon as data via PC! ',
         },

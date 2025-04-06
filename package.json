@@ -1,7 +1,6 @@
 {
   "name": "iro",
   "version": "0.1.0",
-  "homepage": "https://car182.github.io./iro-demo",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -19,7 +18,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "serve": "serve -s build"
   },
   "eslintConfig": {
     "extends": [

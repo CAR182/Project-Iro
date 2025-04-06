@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/iro-demo/static/css/main.a695cfea.css",
-    "main.js": "/iro-demo/static/js/main.8624a827.js",
-    "static/js/411.5b93ad20.chunk.js": "/iro-demo/static/js/411.5b93ad20.chunk.js",
-    "static/js/121.bbe8c263.chunk.js": "/iro-demo/static/js/121.bbe8c263.chunk.js",
-    "static/js/61.9b733cbd.chunk.js": "/iro-demo/static/js/61.9b733cbd.chunk.js",
-    "static/js/682.ddebbeda.chunk.js": "/iro-demo/static/js/682.ddebbeda.chunk.js",
-    "static/js/227.06f1014c.chunk.js": "/iro-demo/static/js/227.06f1014c.chunk.js",
-    "static/js/453.cccda410.chunk.js": "/iro-demo/static/js/453.cccda410.chunk.js",
-    "static/media/PalletTown.mp3": "/iro-demo/static/media/PalletTown.89314e8bc39fbd643a7c.mp3",
-    "static/media/ResearchLab.mp3": "/iro-demo/static/media/ResearchLab.2d29ca185e2b52db08e1.mp3",
-    "static/media/dialogue.png": "/iro-demo/static/media/dialogue.3a8085b57ec15bfa4e17.png",
-    "static/media/PokemonGb.woff": "/iro-demo/static/media/PokemonGb.4c1818702d1f01a31098.woff",
-    "index.html": "/iro-demo/index.html",
-    "main.a695cfea.css.map": "/iro-demo/static/css/main.a695cfea.css.map",
-    "main.8624a827.js.map": "/iro-demo/static/js/main.8624a827.js.map",
-    "453.cccda410.chunk.js.map": "/iro-demo/static/js/453.cccda410.chunk.js.map"
+    "main.css": "/static/css/main.e562a19b.css",
+    "main.js": "/static/js/main.83ac31b3.js",
+    "static/js/411.5b93ad20.chunk.js": "/static/js/411.5b93ad20.chunk.js",
+    "static/js/121.bbe8c263.chunk.js": "/static/js/121.bbe8c263.chunk.js",
+    "static/js/61.9b733cbd.chunk.js": "/static/js/61.9b733cbd.chunk.js",
+    "static/js/682.ddebbeda.chunk.js": "/static/js/682.ddebbeda.chunk.js",
+    "static/js/227.06f1014c.chunk.js": "/static/js/227.06f1014c.chunk.js",
+    "static/js/453.cccda410.chunk.js": "/static/js/453.cccda410.chunk.js",
+    "static/media/PalletTown.mp3": "/static/media/PalletTown.89314e8bc39fbd643a7c.mp3",
+    "static/media/ResearchLab.mp3": "/static/media/ResearchLab.2d29ca185e2b52db08e1.mp3",
+    "static/media/dialogue.png": "/static/media/dialogue.3a8085b57ec15bfa4e17.png",
+    "static/media/PokemonGb.woff": "/static/media/PokemonGb.4c1818702d1f01a31098.woff",
+    "index.html": "/index.html",
+    "main.e562a19b.css.map": "/static/css/main.e562a19b.css.map",
+    "main.83ac31b3.js.map": "/static/js/main.83ac31b3.js.map",
+    "453.cccda410.chunk.js.map": "/static/js/453.cccda410.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a695cfea.css",
-    "static/js/main.8624a827.js"
+    "static/css/main.e562a19b.css",
+    "static/js/main.83ac31b3.js"
   ]
 }

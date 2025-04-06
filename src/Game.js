@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
-import { InputContext, GameContext, CollisionContext, InteractContext, defaults } from './Context';
+import React, { useRef, useEffect, useState, useCallback, useContext } from 'react';
+import { AppContext, InputContext, GameContext, CollisionContext, InteractContext, defaults } from './Context';
 import { fade } from 'Utils';
 
 import PalletTown from 'Locations/PalletTown';
@@ -13,8 +13,12 @@ import Overlay from 'Overlay';
 function Game({ children }) {
   const canvasRef = useRef(null);
   const gameLoopRef = useRef();
+  const appCtx = useContext(AppContext);
 
-  const updateInput = (key, held) => setInputEvent((prev) => ({ ...prev, evt: key, held }));
+  const updateInput = (key, held) => {
+    setInputEvent((prev) => ({ ...prev, evt: key, held }));
+    appCtx.update('nav', key);
+  };
   const updateInteraction = (active, text, id, img) =>
     setInteractionEvent((prev) => ({ ...prev, active, text, id, img }));
   const updateCollision = (value, id) => updateEvent((prev) => ({ ...prev, collided: value, id }));

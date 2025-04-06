@@ -1,5 +1,6 @@
 .App {
     display: flex;
+    flex-direction: column;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -19,6 +20,14 @@
     border-color: grey;
   }
 
+
+  .btnContainer{
+    width: 1024px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    padding: 10px;
+  }
+
   .canvas{
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
@@ -33,3 +42,55 @@
   .hidden {
     visibility: hidden;
   }
+
+  /*AudioToggle*/
+
+  .audioBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 3 / 3;
+    margin-left: auto;
+
+  }
+  .audioBtn >img {
+    width: 50px;
+    margin-bottom: 5px;
+  }
+  .audioBtn >span {
+    color: whitesmoke;
+  }
+
+  /* Keyboard */
+  .keyboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    grid-column: 2 / 3;
+  }
+  .arrowKeys{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);    /* 3 rows */
+    gap: 10px; /* Adds space between the keys */
+    row-gap: 0px;
+  }
+  
+  #up {
+    grid-column: 2 / 2; /* Centers the 'Up' key in the middle column */
+    grid-row: 1 / 1; /* Places the 'Up' key in the top row */
+  }
+  #down {
+    grid-column: 2 / 2; /* Centers the 'Down' key in the middle column */
+    grid-row: 2/ 2; /* Places the 'Down' key in the bottom row */
+  }
+  #left {
+    grid-column: 1 / 1; /* Places the 'Left' key in the left column */
+    grid-row: 2 / 2; /* Places the 'Left' key in the middle row */
+  }
+  #right {
+    grid-column: 3 / 3; /* Places the 'Right' key in the right column */
+    grid-row: 2 / 2; /* Places the 'Right' key in the middle row */
+  }
+  

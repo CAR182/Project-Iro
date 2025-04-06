@@ -8,6 +8,11 @@ const defaults = {
   //activeLocation: { map: LOCATIONS.TOWN, offset: { x: -260, y: -300 } },
   activeLocation: { map: LOCATIONS.PLAYER_2F, offset: { x: 375, y: -150 } },
 };
+const AppContext = createContext({
+  update: () => {},
+  audio: false,
+});
+
 const GameContext = createContext({});
 
 const InputContext = createContext({
@@ -25,4 +30,13 @@ const InteractContext = createContext({ update: () => {}, active: false });
 const DebugContext = createContext({});
 const debugDefaults = { background: true, foreground: true, tiles: false, items: false };
 
-export { InputContext, GameContext, CollisionContext, InteractContext, DebugContext, debugDefaults, defaults };
+export {
+  AppContext,
+  InputContext,
+  GameContext,
+  CollisionContext,
+  InteractContext,
+  DebugContext,
+  debugDefaults,
+  defaults,
+};

@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useContext, useRef } from 'react';
-import { DebugContext } from 'Context';
+import { AppContext, DebugContext } from 'Context';
 import Player from '../Player';
 import MapLayer from '../MapLayer';
 import TileLayer from '../TileLayer';
@@ -8,18 +8,25 @@ import config from './Lab_Config';
 import audioFile from '../assets/ResearchLab.mp3';
 
 export default ({ position }) => {
+  const appCtx = useContext(AppContext);
+
   const debugCtx = useContext(DebugContext);
   const audioRef = useRef();
 
   useEffect(() => {
     document.addEventListener('keydown', () => {
-      if (audioRef.current) audioRef.current.play();
+      if (appCtx.audio & audioRef.current) audioRef.current.play();
     });
 
     return () => {
       if (audioRef.current) audioRef.current.pause();
     };
   }, []);
+
+  useEffect(() => {
+    console.log('Lab AppCtx Changed:', appCtx);
+    appCtx.audio ? audioRef.current.play() : audioRef.current.pause();
+  }, [appCtx]);
 
   return (
     <Fragment>

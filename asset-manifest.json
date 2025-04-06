@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/project-iro/static/css/main.1e9cf90f.css",
+    "main.js": "/project-iro/static/js/main.1f0adc13.js",
+    "static/js/411.5b93ad20.chunk.js": "/project-iro/static/js/411.5b93ad20.chunk.js",
+    "static/js/121.bbe8c263.chunk.js": "/project-iro/static/js/121.bbe8c263.chunk.js",
+    "static/js/61.9b733cbd.chunk.js": "/project-iro/static/js/61.9b733cbd.chunk.js",
+    "static/js/682.ddebbeda.chunk.js": "/project-iro/static/js/682.ddebbeda.chunk.js",
+    "static/js/227.06f1014c.chunk.js": "/project-iro/static/js/227.06f1014c.chunk.js",
+    "static/js/453.cccda410.chunk.js": "/project-iro/static/js/453.cccda410.chunk.js",
+    "static/media/PalletTown.mp3": "/project-iro/static/media/PalletTown.89314e8bc39fbd643a7c.mp3",
+    "static/media/ResearchLab.mp3": "/project-iro/static/media/ResearchLab.2d29ca185e2b52db08e1.mp3",
+    "static/media/dialogue.png": "/project-iro/static/media/dialogue.3a8085b57ec15bfa4e17.png",
+    "static/media/PokemonGb.woff": "/project-iro/static/media/PokemonGb.4c1818702d1f01a31098.woff",
+    "index.html": "/project-iro/index.html",
+    "main.1e9cf90f.css.map": "/project-iro/static/css/main.1e9cf90f.css.map",
+    "main.1f0adc13.js.map": "/project-iro/static/js/main.1f0adc13.js.map",
+    "453.cccda410.chunk.js.map": "/project-iro/static/js/453.cccda410.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e9cf90f.css",
+    "static/js/main.1f0adc13.js"
+  ]
+}

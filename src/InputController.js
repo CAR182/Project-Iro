@@ -2,6 +2,8 @@ import { useContext, useEffect } from 'react';
 import { InputContext } from './Context';
 
 function InputController() {
+  const isMobile = window.innerWidth < 768;
+
   const input = useContext(InputContext);
 
   const onKeyDown = (event) => {
@@ -20,14 +22,15 @@ function InputController() {
     document.addEventListener('keyup', onKeyUp);
     document.addEventListener('mouseUp', onKeyUp);
     document.addEventListener('touchend', onKeyUp);
-    document.addEventListener('contextmenu', (event) => event.preventDefault());
+
+    if (isMobile) document.addEventListener('contextmenu', (event) => event.preventDefault());
 
     return () => {
       document.removeEventListener('keydown', onKeyDown);
       document.removeEventListener('keyup', onKeyUp);
       document.removeEventListener('mouseUp', onKeyUp);
       document.removeEventListener('touchend', onKeyUp);
-      document.removeEventListener('contextmenu', (event) => event.preventDefault());
+      if (isMobile) document.removeEventListener('contextmenu', (event) => event.preventDefault());
     };
   }, []);
 

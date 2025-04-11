@@ -37,7 +37,8 @@ function Player({ config }) {
   useLayoutEffect(() => {
     if (canvasCtx && sprite) {
       sprite.draw(canvasCtx); //1st Draw
-
+      canvasCtx.canvas.style.left = `${gameCtx.canvas.width / 2}px`; // Center Player Canvas correctly - TODO Get these values from config
+      canvasCtx.canvas.style.top = `${gameCtx.canvas.height / 2}px`;
       if (inputCtx.evt) {
         setDirection(inputCtx.evt);
 

@@ -10,6 +10,7 @@ function TileLayer({ name, tileData, offset, visible }) {
   const inputCtx = useContext(InputContext);
   const collisionCtx = useContext(CollisionContext);
   const canvasRef = useRef(null);
+  const scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.
 
   const [canvasCtx, setCanvas] = useState(null);
   const [tiles, setTiles] = useState([]); //TODO combine into single update call
@@ -113,6 +114,8 @@ function TileLayer({ name, tileData, offset, visible }) {
   }, [gameCtx, inputCtx, canvasCtx]);
 
   function collisionCheck(tiles, offsetX, offsetY) {
+    offsetX = offsetX / scale;
+    offsetY = offsetY / scale;
     if (visible) {
       canvasCtx.strokeStyle = 'green';
       canvasCtx.strokeRect(
@@ -160,24 +163,27 @@ function TileLayer({ name, tileData, offset, visible }) {
       }
     }
   }
+  // Player size = 30
 
   const updateLayer = (tiles) => {
+    const isMobile = window.innerWidth < 768;
+
+    const val = isMobile ? 20 : 10;
     switch (inputCtx.evt) {
       case INPUT.W:
-        collisionCheck(tiles, 0, -10);
+        collisionCheck(tiles, 0, -val);
         if (!collisionCtx.collided) tiles.forEach((tile) => (tile.position.y += gameCtx.moveSpeed));
         break;
       case INPUT.A:
-        collisionCheck(tiles, -10, 0);
+        collisionCheck(tiles, -val, 0);
         if (!collisionCtx.collided) tiles.forEach((tile) => (tile.position.x += gameCtx.moveSpeed));
         break;
       case INPUT.S:
-        collisionCheck(tiles, 0, 10);
+        collisionCheck(tiles, 0, val);
         if (!collisionCtx.collided) tiles.forEach((tile) => (tile.position.y -= gameCtx.moveSpeed));
-
         break;
       case INPUT.D:
-        collisionCheck(tiles, 10, 0);
+        collisionCheck(tiles, val, 0);
         if (!collisionCtx.collided) tiles.forEach((tile) => (tile.position.x -= gameCtx.moveSpeed));
         break;
       default:

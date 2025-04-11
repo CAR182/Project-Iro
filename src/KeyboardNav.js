@@ -15,6 +15,8 @@ const KeyboardNav = ({ value }) => {
   const leftOutline = isMobile ? 'icons/keyboard_arrow_left_outline.png' : 'icons/keyboard_a_outline.png';
   const rightFill = isMobile ? 'icons/keyboard_arrow_right.png' : 'icons/keyboard_d.png';
   const rightOutline = isMobile ? 'icons/keyboard_arrow_right_outline.png' : 'icons/keyboard_d_outline.png';
+  const selectFill = isMobile ? 'icons/button_a.png' : 'icons/keyboard_space_outline.png';
+  const selectOutline = isMobile ? 'icons/button_a_outline.png' : 'icons/keyboard_space_outline.png';
 
   const input = useContext(InputContext);
 
@@ -25,7 +27,11 @@ const KeyboardNav = ({ value }) => {
   return (
     <div className={styles.keyboard}>
       <div className={styles.arrowKeys}>
-        <div id={styles.up} onMouseDown={() => onKeyDown(INPUT.W)} onTouchStart={() => onKeyDown(INPUT.W)}>
+        <div
+          id={styles.up}
+          onMouseDown={() => onKeyDown(INPUT.W)}
+          onTouchStart={() => onKeyDown(INPUT.W)}
+          onTouchEnd={() => onKeyDown(null)}>
           {value == INPUT.W ? <img src={upFill} /> : <img src={upOutline} />}
         </div>
         <div id={styles.down} onMouseDown={() => onKeyDown(INPUT.S)} onTouchStart={() => onKeyDown(INPUT.S)}>
@@ -39,7 +45,7 @@ const KeyboardNav = ({ value }) => {
         </div>
       </div>
       <div onMouseDown={() => onKeyDown(INPUT.Space)} onTouchStart={() => onKeyDown(INPUT.Space)}>
-        {value == INPUT.Space ? <img src='icons/keyboard_space.png' /> : <img src='icons/keyboard_space_outline.png' />}
+        {value == INPUT.Space ? <img src={selectFill} /> : <img src={selectOutline} />}
       </div>
     </div>
   );

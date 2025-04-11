@@ -10,16 +10,26 @@ import styles from './App.module.css';
 
 function App() {
   const [debugCtx, setDebugCtx] = useState(debugDefaults);
-
   const updateAppCtx = (key, value) => setAppCtx((prev) => ({ ...prev, [key]: value }));
   const [appCtx, setAppCtx] = useState({ update: updateAppCtx });
-
   const updateInput = (key, held) => setInputEvent((prev) => ({ ...prev, evt: key, held }));
   const [inputCtx, setInputEvent] = useState({ evt: null, setEvent: updateInput });
+  const [landscape, setLandscape] = useState(false);
 
   useEffect(() => {
-    console.log('App Mount:', debugCtx);
+    window.addEventListener('orientationchange', handleDeviceDetection);
+    return () => {
+      window.removeEventListener('orientationchange', handleDeviceDetection);
+    };
   }, []);
+
+  const handleDeviceDetection = () => {
+    if (window.matchMedia('(orientation: landscape)').matches) {
+      setLandscape(false);
+    } else {
+      setLandscape(true);
+    }
+  };
 
   useControls(
     'Layer Visibility',
@@ -47,6 +57,7 @@ function App() {
   return (
     <AppContext.Provider value={appCtx}>
       <InputContext.Provider value={inputCtx}>
+        {landscape && <div className={styles.landscape}>LANDSCAPE MODE NOT SUPPORTED</div>}
         <div className={styles.App}>
           <div className={styles.container}>
             <DebugContext.Provider value={debugCtx}>
@@ -64,7 +75,7 @@ function App() {
             <AudioToggle value={appCtx.audio} clickHandler={(value) => updateAppCtx('audio', value)} />
           </div>
           <div className={styles.text}>
-            <span>Version:{process.env.REACT_APP_VERSION}</span>
+            <span>Version: {process.env.REACT_APP_VERSION}</span>
             <span>Created By: crayner</span>
           </div>
         </div>

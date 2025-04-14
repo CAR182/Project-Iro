@@ -55,5 +55,8 @@
         font-size: small;
         line-height: 10px;
     }
+    .image{
+        height: 325px;
+    }
 
   }

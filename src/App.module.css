@@ -8,6 +8,7 @@
     align-items: center;
     background: radial-gradient(circle, rgba(41,45,61,1) 0%, rgba(3,4,13,1) 100%);
     overflow: hidden;
+
   }
   .landscape{
     display: flex;
@@ -76,8 +77,6 @@
     flex-direction: column;
     align-items: center;
     grid-column: 3 / 3;
-    margin-left: auto;
-
   }
   .audioBtn > img, .debugBtn >img {
     width: 50px;
@@ -86,10 +85,14 @@
   .audioBtn >span, .debugBtn >span {
     color: whitesmoke;
   }
+  .audioBtn {
+    margin-right: auto;
+  }
 
   /*DebugBtn*/
   .debugBtn{
     grid-column: 1 / 1;
+    margin-left: auto;
   }
 
   /* Keyboard */

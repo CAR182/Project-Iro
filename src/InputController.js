@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import { InputContext } from './Context';
 
 function InputController() {
-  const isMobile = window.innerWidth < 768;
+  const isMobile = !window.matchMedia('(pointer:fine)').matches;
 
   const input = useContext(InputContext);
 
@@ -26,7 +26,6 @@ function InputController() {
     document.addEventListener('touchend', onKeyUp);
 
     if (isMobile) document.addEventListener('contextmenu', (event) => event.preventDefault());
-
     return () => {
       document.removeEventListener('keydown', onKeyDown);
       document.removeEventListener('keyup', onKeyUp);

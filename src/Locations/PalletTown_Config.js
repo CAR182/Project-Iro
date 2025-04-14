@@ -59,7 +59,6 @@ export default {
       3: {
         type: TILETYPES.TRANSPORT,
         colour: 'purple',
-
         onCollision: {
           destination: LOCATIONS.RIVAL,
           position: { x: 275, y: -150 },
@@ -68,7 +67,6 @@ export default {
       8: {
         type: TILETYPES.TRANSPORT,
         colour: 'purple',
-
         onCollision: {
           destination: LOCATIONS.LAB,
           position: { x: 150, y: -430 },

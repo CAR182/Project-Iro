@@ -5,7 +5,7 @@ import { INPUT } from 'Utils';
 import styles from './App.module.css';
 
 const KeyboardNav = ({ value }) => {
-  const isMobile = window.innerWidth < 768;
+  const isMobile = !window.matchMedia('(pointer:fine)').matches;
 
   const upFill = isMobile ? 'icons/keyboard_arrow_up.png' : 'icons/keyboard_w.png';
   const upOutline = isMobile ? 'icons/keyboard_arrow_up_outline.png' : 'icons/keyboard_w_outline.png';

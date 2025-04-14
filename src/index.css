@@ -1,6 +1,8 @@
 @font-face { 
   font-family: 'PokemonGB';
-  src: url('assets/PokemonGb.woff') format('woff');
+  src: url('assets/PokemonGb.woff') format('woff'),
+  url('assets/PokemonGb.ttf') format('truetype'),
+  url('assets/PokemonGb.svg#PokemonGB') format("svg");
   }
 
 html,
@@ -24,7 +26,9 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+} 
 
 
 code {

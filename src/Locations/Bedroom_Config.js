@@ -21,7 +21,7 @@ export default {
         colour: 'purple',
         onCollision: {
           destination: LOCATIONS.PLAYER_1F,
-          position: { x: 0, y: 150 },
+          position: { x: 50, y: 150 },
         },
       },
       1043: { ...alphaTile, onCollision: { text: "ASH is playing the SNES!...Okey! It's time to go!" } },

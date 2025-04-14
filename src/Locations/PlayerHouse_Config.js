@@ -32,7 +32,7 @@ export default {
 
         onCollision: {
           destination: LOCATIONS.PLAYER_2F,
-          position: { x: 0, y: 150 },
+          position: { x: 50, y: 150 },
         },
       },
       590: {

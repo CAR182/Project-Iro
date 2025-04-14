@@ -5,7 +5,7 @@ import { NPC, Item } from 'Spawn';
 import styles from './App.module.css';
 
 // TODO Given we can spawn NPCs and Tiles now, we can move the Tile logic to it's own class to keep things tidy.
-function TileLayer({ name, tileData, offset, visible }) {
+function TileLayer({ name, tileData, offset, debug }) {
   const gameCtx = useContext(GameContext);
   const inputCtx = useContext(InputContext);
   const collisionCtx = useContext(CollisionContext);
@@ -108,7 +108,7 @@ function TileLayer({ name, tileData, offset, visible }) {
       if (inputCtx.evt) {
         canvasCtx.clearRect(0, 0, canvasCtx.canvas.width, canvasCtx.canvas.height);
         updateLayer(tiles, inputCtx.evt);
-        if (visible) tiles.forEach((tile) => tile.draw(canvasCtx));
+        if (debug) tiles.forEach((tile) => tile.draw(canvasCtx));
       }
     }
   }, [gameCtx, inputCtx, canvasCtx]);
@@ -116,7 +116,7 @@ function TileLayer({ name, tileData, offset, visible }) {
   function collisionCheck(tiles, offsetX, offsetY) {
     offsetX = offsetX / scale;
     offsetY = offsetY / scale;
-    if (visible) {
+    if (debug) {
       canvasCtx.strokeStyle = 'green';
       canvasCtx.strokeRect(
         gameCtx.player.x + offsetX,
@@ -166,9 +166,7 @@ function TileLayer({ name, tileData, offset, visible }) {
   // Player size = 30
 
   const updateLayer = (tiles) => {
-    const isMobile = window.innerWidth < 768;
-
-    const val = isMobile ? 20 : 10;
+    const val = 20;
     switch (inputCtx.evt) {
       case INPUT.W:
         collisionCheck(tiles, 0, -val);

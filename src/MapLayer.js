@@ -6,7 +6,7 @@ import { log, INPUT } from 'Utils';
 
 import styles from './App.module.css';
 
-function MapLayer({ name, image, offset, visible }) {
+function MapLayer({ name, image, offset, debug }) {
   const gameCtx = useContext(GameContext);
   const inputCtx = useContext(InputContext);
   const collisionCtx = useContext(CollisionContext);
@@ -27,14 +27,14 @@ function MapLayer({ name, image, offset, visible }) {
 
   useEffect(() => {
     if (canvasCtx && layer) {
-      if (visible) layer.draw(canvasCtx);
+      if (debug) layer.draw(canvasCtx);
     }
   }, [canvasCtx]);
 
   useEffect(() => {
     if (canvasCtx && layer) {
       if (inputCtx.evt) updateLayer();
-      if (visible) layer.draw(canvasCtx);
+      if (debug) layer.draw(canvasCtx);
       else canvasCtx.clearRect(0, 0, canvasCtx.canvas.width, canvasCtx.canvas.height);
     }
   }, [gameCtx, inputCtx, canvasCtx]);

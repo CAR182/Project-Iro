@@ -22,9 +22,10 @@ export default {
       94: { ...alphaTile, onCollision: { text: "It's a big Map! This is useful!" } },
       3: {
         type: TILETYPES.TRANSPORT,
+        colour: 'purple',
         onCollision: {
           destination: LOCATIONS.TOWN,
-          position: { x: -775, y: -275 },
+          position: { x: -775, y: -285 },
         },
       },
     },

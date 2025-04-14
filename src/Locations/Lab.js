@@ -36,16 +36,16 @@ export default ({ position }) => {
         name={`Oak's Lab  Background`}
         image={config.images.background}
         offset={position}
-        visible={debugCtx.background}
+        debug={debugCtx.background}
       />
       <Player config={gameConfig.player} />
       <MapLayer
         name={`Oak's Lab  Forground`}
         image={config.images.foreground}
         offset={position}
-        visible={debugCtx.foreground}
+        debug={debugCtx.foreground}
       />
-      <TileLayer name={`Oak's Lab  TileMap`} tileData={config.tileMap} offset={position} visible={debugCtx.tiles} />
+      <TileLayer name={`Oak's Lab  TileMap`} tileData={config.tileMap} offset={position} debug={debugCtx.tiles} />
     </Fragment>
   );
 };

@@ -35,16 +35,16 @@ function PalletTown({ position }) {
         name={'PalletTown Background'}
         image={config.images.background}
         offset={position}
-        visible={debugCtx.background}
+        debug={debugCtx.background}
       />
       <Player config={gameConfig.player} />
       <MapLayer
         name={'PalletTown Foreground'}
         image={config.images.foreground}
         offset={position}
-        visible={debugCtx.foreground}
+        debug={debugCtx.foreground}
       />
-      <TileLayer name={'PalletTown TileMap'} tileData={config.tileMap} offset={position} visible={debugCtx.tiles} />
+      <TileLayer name={'PalletTown TileMap'} tileData={config.tileMap} offset={position} debug={debugCtx.tiles} />
     </Fragment>
   );
 }

@@ -15,10 +15,10 @@ export default ({ position }) => {
         name={`PlayerHouse BaseMap`}
         image={config.images.background}
         offset={position}
-        visible={debugCtx.background}
+        debug={debugCtx.background}
       />
       <Player config={gameConfig.player} />
-      <TileLayer name={`PlayerHouse TileMap`} tileData={config.tileMap} offset={position} visible={debugCtx.tiles} />
+      <TileLayer name={`PlayerHouse TileMap`} tileData={config.tileMap} offset={position} debug={debugCtx.tiles} />
     </Fragment>
   );
 };

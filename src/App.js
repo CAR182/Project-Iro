@@ -69,7 +69,7 @@ function App() {
           <div className={styles.btnContainer}>
             <DebugToggle
               value={debugCtx.tiles}
-              clickHandler={(value) => setDebugCtx((prev) => ({ ...prev, tiles: value }))}
+              clickHandler={(value) => setDebugCtx((prev) => ({ ...prev, tiles: value, items: value }))}
             />
             <KeyboardNav value={inputCtx.evt} />
             <AudioToggle value={appCtx.audio} clickHandler={(value) => updateAppCtx('audio', value)} />

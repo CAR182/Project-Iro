@@ -48,9 +48,11 @@ export default {
 
       896: {
         type: TILETYPES.TRANSPORT,
+        colour: 'purple',
+
         onCollision: {
           destination: LOCATIONS.TOWN,
-          position: { x: -715, y: -650 }, //TODO SET THIS
+          position: { x: -715, y: -675 }, //TODO SET THIS
         },
       },
     },

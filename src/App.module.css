@@ -59,8 +59,9 @@
 
   .debugCanvas
   {
-    border-style: dotted  ;
-    border-color: red;
+    border-style: solid  ;
+    border-color: blue;
+    border-width: 5px;
   }
 
   .hidden {

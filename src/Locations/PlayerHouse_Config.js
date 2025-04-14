@@ -28,6 +28,8 @@ export default {
       },
       592: {
         type: TILETYPES.TRANSPORT,
+        colour: 'purple',
+
         onCollision: {
           destination: LOCATIONS.PLAYER_2F,
           position: { x: 0, y: 150 },
@@ -35,6 +37,8 @@ export default {
       },
       590: {
         type: TILETYPES.TRANSPORT,
+        colour: 'purple',
+
         onCollision: {
           destination: LOCATIONS.TOWN,
           position: { x: -260, y: -300 },

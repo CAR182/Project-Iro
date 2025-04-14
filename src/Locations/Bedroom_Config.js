@@ -18,6 +18,7 @@ export default {
       898: { type: TILETYPES.COLLISION },
       896: {
         type: TILETYPES.TRANSPORT,
+        colour: 'purple',
         onCollision: {
           destination: LOCATIONS.PLAYER_1F,
           position: { x: 0, y: 150 },

@@ -49,6 +49,8 @@ export default {
       27: { ...alphaTile, onCollision: { text: "PROF.OAK's Pokemon Research Lab" } },
       1: {
         type: TILETYPES.TRANSPORT,
+        colour: 'purple',
+
         onCollision: {
           destination: LOCATIONS.PLAYER_1F,
           position: { x: 275, y: -110 },
@@ -56,6 +58,8 @@ export default {
       },
       3: {
         type: TILETYPES.TRANSPORT,
+        colour: 'purple',
+
         onCollision: {
           destination: LOCATIONS.RIVAL,
           position: { x: 275, y: -150 },
@@ -63,6 +67,8 @@ export default {
       },
       8: {
         type: TILETYPES.TRANSPORT,
+        colour: 'purple',
+
         onCollision: {
           destination: LOCATIONS.LAB,
           position: { x: 150, y: -430 },

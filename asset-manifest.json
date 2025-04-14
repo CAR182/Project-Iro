@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.dbbb3d48.css",
-    "main.js": "./static/js/main.7e9fb9a1.js",
+    "main.css": "./static/css/main.e3031781.css",
+    "main.js": "./static/js/main.ab981af0.js",
     "static/js/411.5b93ad20.chunk.js": "./static/js/411.5b93ad20.chunk.js",
     "static/js/121.bbe8c263.chunk.js": "./static/js/121.bbe8c263.chunk.js",
     "static/js/61.9b733cbd.chunk.js": "./static/js/61.9b733cbd.chunk.js",
@@ -10,15 +10,17 @@
     "static/js/453.cccda410.chunk.js": "./static/js/453.cccda410.chunk.js",
     "static/media/PalletTown.mp3": "./static/media/PalletTown.89314e8bc39fbd643a7c.mp3",
     "static/media/ResearchLab.mp3": "./static/media/ResearchLab.2d29ca185e2b52db08e1.mp3",
+    "static/media/PokemonGb.svg": "./static/media/PokemonGb.1b2b285763230966218a.svg",
     "static/media/dialogue.png": "./static/media/dialogue.3a8085b57ec15bfa4e17.png",
+    "static/media/PokemonGb.ttf": "./static/media/PokemonGb.6211ee48ea626f34681e.ttf",
     "static/media/PokemonGb.woff": "./static/media/PokemonGb.4c1818702d1f01a31098.woff",
     "index.html": "./index.html",
-    "main.dbbb3d48.css.map": "./static/css/main.dbbb3d48.css.map",
-    "main.7e9fb9a1.js.map": "./static/js/main.7e9fb9a1.js.map",
+    "main.e3031781.css.map": "./static/css/main.e3031781.css.map",
+    "main.ab981af0.js.map": "./static/js/main.ab981af0.js.map",
     "453.cccda410.chunk.js.map": "./static/js/453.cccda410.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbbb3d48.css",
-    "static/js/main.7e9fb9a1.js"
+    "static/css/main.e3031781.css",
+    "static/js/main.ab981af0.js"
   ]
 }

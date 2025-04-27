@@ -25,14 +25,20 @@ function InputController() {
 
     document.addEventListener('touchend', onKeyUp);
 
-    if (isMobile) document.addEventListener('contextmenu', (event) => event.preventDefault());
+    if (isMobile)
+      document.addEventListener('contextmenu', (event) => {
+        if (!event.target.href) event.preventDefault();
+      });
     return () => {
       document.removeEventListener('keydown', onKeyDown);
       document.removeEventListener('keyup', onKeyUp);
       document.removeEventListener('mouseUp', onKeyUp);
       //document.removeEventListener('touchstart', onKeyDown);
       document.removeEventListener('touchend', onKeyUp);
-      if (isMobile) document.removeEventListener('contextmenu', (event) => event.preventDefault());
+      if (isMobile)
+        document.removeEventListener('contextmenu', (event) => {
+          if (!event.target.href) event.preventDefault();
+        });
     };
   }, []);
 

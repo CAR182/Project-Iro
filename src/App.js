@@ -77,6 +77,11 @@ function App() {
           <div className={styles.text}>
             <span>Version: {process.env.REACT_APP_VERSION}</span>
             <span>Created By: crayner</span>
+            <span>
+              <a target='_blank' href={process.env.REACT_APP_URL}>
+                {process.env.REACT_APP_URL}
+              </a>
+            </span>
           </div>
         </div>
       </InputContext.Provider>

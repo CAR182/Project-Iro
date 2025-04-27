@@ -43,6 +43,10 @@
   .text >span{
       margin-top: 10px;
   }
+  .text > span > a {
+    text-decoration: underline;
+    color: white;
+  }
 
 
   .btnContainer{
